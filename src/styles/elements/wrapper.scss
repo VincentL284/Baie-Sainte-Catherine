@@ -1,0 +1,18 @@
+/* ==========================================================================
+   WRAPPER / ELEMENT
+   ========================================================================== */
+
+.wrapper,
+.mini_wrapper {
+    max-width: $breakpoint-lg;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.mini_wrapper {
+    max-width: $breakpoint-ml;
+}
+
+section {
+    padding: 10px 0;
+}

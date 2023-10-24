@@ -1,0 +1,32 @@
+.location {
+    img {
+        width: 100%;
+    }
+    .hotel_ville {
+        display: flex;
+        flex-direction: column;
+    }
+    .grille_info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .grille_info p {
+        margin: 10px 0;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        @media screen and (max-width: $breakpoint-md) {
+            display: block;
+        }
+    }
+}
+.gauche {
+    text-align: left;
+}

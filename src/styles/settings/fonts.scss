@@ -1,0 +1,34 @@
+/* ==========================================================================
+   FONTS / SETTINGS
+   ========================================================================== */
+/// Font family
+:root {
+    --font-primary: 'Karla', sans-serif;
+    --font-secondary: 'Libre Franklin', sans-serif;
+    --font-logo: 'McLaren', sans-serif;
+
+    --font-size-content: 1.5rem;
+    /// Grosseur des textes
+    --font-size-h2: 3.6rem;
+    --font-size-h2-mobile: 2.8rem;
+
+    --font-size-h3: 3.2rem;
+    --font-size-h3-mobile: 2rem;
+
+    --font-size-h4: 2rem;
+
+    --font-size-logo: 2.6rem;
+    --font-size-slogan: 1.6rem;
+
+    @media screen and (max-width: 1024px) {
+        --font-size-h4: 1.6rem;
+        --font-size-content: 1.4rem;
+    }
+    @media screen and (max-width: 768px) {
+        --font-size-h2: 2.8rem;
+    }
+}
+
+.h3_mobile {
+    font-size: var(--font-size-h3-mobile);
+}

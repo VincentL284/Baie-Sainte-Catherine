@@ -1,0 +1,42 @@
+.youtube {
+    p {
+        text-align: center;
+    }
+    .grille_video {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .video {
+        color: var(--color-white);
+        text-align: center;
+        height: 400px;
+        position: relative;
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            object-fit: cover;
+            height: 400px;
+            width: 100%;
+            border-radius: 18px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease-out;
+        }
+
+        &:hover .icon {
+            color: var(--color-bg-secondary);
+            transform: translate(-50%, -50%) rotate(120deg) scale(80%);
+        }
+    }
+}

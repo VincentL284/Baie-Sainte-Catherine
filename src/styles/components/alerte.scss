@@ -1,0 +1,37 @@
+.alerte {
+    background-color: var(--color-bg-secondary);
+}
+.alerte p {
+    color: var(--color-white);
+    margin: 0;
+    text-align: left;
+    padding: 15px;
+    @media screen and (max-width: $breakpoint-md) {
+        text-align: left;
+    }
+}
+.alerte .wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @media screen and (max-width: $breakpoint-md) {
+        justify-content: flex-start;
+    }
+}
+.widget_meteo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: var(--spacing-md);
+    @media screen and (max-width: $breakpoint-sm) {
+        display: none;
+    }
+}
+
+.widget {
+    color: var(--color-white);
+    svg {
+        height: 38px;
+        width: 38px;
+    }
+}

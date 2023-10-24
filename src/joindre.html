@@ -1,0 +1,214 @@
+{% include '_partials/_header.html' %}
+
+<section class="location">
+    <div class="wrapper">
+        <div data-scrolly="fromLeft" class="hotel_ville">
+            <h2 class="gauche">Hôtel de ville</h2>
+            <div>
+                <img src="assets/images/hotel_ville.jpg" alt="hotel de ville" />
+            </div>
+            <div class="grille_info">
+                <div>
+                    <h3 class="h3_mobile">Adresse</h3>
+                    <p>Édifice municipal Albert-Boulianne 308, rue Leclerc, Baie-Sainte-Catherine (Québec) G0T 1A0</p>
+                </div>
+                <div>
+                    <h3 class="h3_mobile">Horaire</h3>
+                    <p>Lundi au jeudi :8h30 à 12h00 & 13h00 à 16h30</p>
+                    <p>Vendredi : Fermé</p>
+                </div>
+                <div>
+                    <h3 class="h3_mobile">Contact</h3>
+                    <p>Téléphone : 418-620-5020</p>
+                    <p>Télécopieur: 418-620-5021</p>
+                    <p>Courriel : municipalite@baiestecatherine.com</p>
+                </div>
+            </div>
+        </div>
+        <div data-scrolly="fromRight" class="carte">
+            <h2 class="gauche">Carte</h2>
+            <img src="assets/images/carte.jpg" alt="carte" />
+        </div>
+    </div>
+</section>
+
+<section class="formulaire">
+    <div class="mini_wrapper">
+        <h2 data-scrolly="fromBottom" class="gauche">Requête citoyenne</h2>
+
+        <form action="" class="form" autocomplete="off" data-component="Form">
+            <div class="form__body">
+                <h5 data-scrolly="fromBottom">Informations personnelles</h5>
+                <fieldset class="grille_info_perso">
+                    <div data-scrolly="fromLeft" class="input">
+                        <label class="form__label" for="name">Nom</label>
+                        <input class="input__element" type="text" name="name" id="name" placeholder="" required />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+                    <div data-scrolly="fromRight" class="input">
+                        <label class="form__label" for="firstname">Prénom</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="firstname"
+                            id="firstname"
+                            placeholder=""
+                            required
+                        />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+
+                    <div data-scrolly="fromLeft" class="input">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="input__element" type="email" name="email" id="email" placeholder="" required />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+                    <div data-scrolly="fromRight" class="input">
+                        <label class="form__label" for="phone">Téléphone</label>
+                        <input
+                            class="input__element"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            placeholder=""
+                            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                            required
+                        />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+                    <div data-scrolly="fromLeft" class="input">
+                        <label class="form__label" for="adress">Numéro civique et rue</label>
+                        <input class="input__element" type="text" name="adress" id="adress" placeholder="" required />
+                    </div>
+                    <div data-scrolly="fromRight" class="input">
+                        <label class="form__label" for="postalcode">Code postal</label>
+                        <input
+                            class="input__element"
+                            type="text"
+                            name="postalcode"
+                            id="postalcode"
+                            placeholder=""
+                            required
+                        />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+
+                    <div data-scrolly="fromLeft" class="input">
+                        <label class="form__label" for="city">Ville</label>
+                        <input class="input__element" type="text" name="city" id="city" placeholder="" required />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+                    <div data-scrolly="fromRight" class="input">
+                        <label class="form__label" for="country">Pays</label>
+                        <input class="input__element" type="text" name="country" id="country" placeholder="" required />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+
+                    <div data-scrolly="fromLeft" class="input select">
+                        <label class="form__label" for="province">Province</label>
+                        <select name="province" id="province" class="input__element" required>
+                            <option value="" hidden>Choisir une province</option>
+                            <option value="on">Ontario</option>
+                            <option value="al">Alberta</option>
+                            <option value="qc">Québec</option>
+                            <option value="ma">Manitoba</option>
+                            <option value="sa">Saskatchewan</option>
+                            <option value="cb">Colombie-Britannique</option>
+                            <option value="pe">Île-du-Prince-Édouard</option>
+                            <option value="nb">Nouveau-Brunswick</option>
+                            <option value="ne">Nouvelle-Écosse</option>
+                            <option value="tn">Terre-Neuve et Labrador</option>
+                        </select>
+                        <p class="defi_message">Erreur</p>
+                    </div>
+                </fieldset>
+                <fielset>
+                    <fieldset data-scrolly="fromLeft">
+                        <h5 data-scrolly="fromBottom">Quel est le meilleur moyen de vous rejoindre?</h5>
+                        <div data-input-container>
+                            <div class="input radio">
+                                <div class="flex__radio">
+                                    <label class="form__label" for="moyen1">Courriel</label>
+                                    <input
+                                        class="input__element"
+                                        type="radio"
+                                        name="moyen[]"
+                                        id="mail"
+                                        value="Courriel"
+                                        required
+                                    />
+                                </div>
+
+                                <p class="defi_message">Erreur</p>
+                            </div>
+
+                            <div class="input radio">
+                                <div class="flex__radio">
+                                    <label class="form__label" for="moyen2">Téléphone</label>
+                                    <input
+                                        class="input__element"
+                                        type="radio"
+                                        name="moyen[]"
+                                        id="moyen2"
+                                        value="Telephone"
+                                        required
+                                    />
+                                </div>
+
+                                <p class="defi_message">Erreur</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </fielset>
+                <fieldset>
+                    <h5 data-scrolly="fromBottom">Passer une demande</h5>
+                    <div data-scrolly="fromBottom" class="input sujet">
+                        <label class="form__label" for="subject">Sujet</label>
+                        <input class="input__element" type="text" name="subject" id="subject" placeholder="" required />
+                        <p class="defi_message">Erreur</p>
+                    </div>
+
+                    <div data-scrolly="fromBottom" class="input textarea u-grid-fullwidth">
+                        <label class="form__label" for="message">Message</label>
+                        <textarea class="input__element" name="message" id="message" required></textarea>
+                        <p class="defi_message">Erreur</p>
+                    </div>
+                    <div data-scrolly="fromBottom" class="input checkbox">
+                        <input class="input__element" type="checkbox" name="optin[]" id="optin" value="true" />
+                        <label class="form__label" for="optin">Je veux m'abonner à l'infolettre!</label>
+                        <p class="defi_message">Erreur</p>
+                    </div>
+                </fieldset>
+                <footer class="form__footer">
+                    <button data-scrolly="fromBottom">Soumettre</button>
+                </footer>
+            </div>
+
+            <div class="form__confirmation">
+                <h2>Merci</h2>
+                <p class="centre">C'est envoyé!</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="infolettre">
+    <div class="wrapper">
+        <h2 data-scrolly="fromBottom">Restez à l'affut</h2>
+        <p data-scrolly="fromBottom" class="centre">Inscrivez-vous à notre infolettre!</p>
+        <div data-scrolly="fromBottom" class="infolettre_deco">
+            <div class="rond ombre"></div>
+            <div class="deco_content ombre">
+                <p><strong>Infolettre</strong></p>
+                <div class="input">
+                    <label class="form__label" for="email">Email</label>
+                    <input class="input__element" type="email" name="email" id="email" placeholder="" required />
+                </div>
+
+                <button>Soumettre</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include '_partials/_footer.html' %}

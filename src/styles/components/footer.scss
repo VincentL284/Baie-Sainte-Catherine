@@ -1,0 +1,33 @@
+footer {
+    background-color: var(--color-primary);
+    margin-top: 40px;
+    padding: 20px 0;
+
+    .menu_footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .icon {
+        width: 42px;
+        height: 42px;
+        color: var(--color-white);
+    }
+    .infos_footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 150px;
+        color: var(--color-white);
+        @media screen and (max-width: $breakpoint-md) {
+            display: block;
+        }
+    }
+    .droite {
+        text-align: right;
+        @media screen and (max-width: $breakpoint-md) {
+            text-align: left;
+        }
+    }
+}

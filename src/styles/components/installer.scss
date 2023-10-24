@@ -1,0 +1,107 @@
+.installer {
+    background-color: var(--color-bg-primary);
+    margin-top: 30px;
+    .accordion__header img {
+        width: 100%;
+        height: 156px;
+
+        object-fit: cover;
+        border-radius: 19px;
+        display: block;
+    }
+    .accordion__header {
+        z-index: 10;
+        position: relative;
+        margin-bottom: 15px;
+        &:hover {
+            cursor: pointer;
+            .bouton_installer {
+                background-color: var(--color-bg-secondary);
+            }
+        }
+    }
+
+    .sombre {
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 19px;
+        top: 0;
+        left: 0;
+    }
+
+    .accordion__container {
+        //.accordion__content représente le contenu caché par défaut
+        .accordion__content {
+            display: none;
+            border: 1px solid var(--color-primary);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        &.content-is-active {
+            .accordion__content {
+                //On affiche le contenu lorsqu'il y a l'état is-active
+                display: block;
+            }
+            .bouton_installer {
+                transform: rotateZ(45deg);
+            }
+        }
+    }
+
+    .installer_content {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        transform: translateY(-50%);
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        z-index: 4;
+        margin-left: 20px;
+    }
+    .installer_content h2 {
+        color: var(--color-white);
+        margin: 0;
+        pointer-events: none;
+    }
+
+    .bouton_installer {
+        z-index: 6;
+        width: 50px;
+        height: 50px;
+        display: block;
+        position: relative;
+
+        background-color: var(--color-secondary);
+        border-radius: 100%;
+        margin-right: 50px;
+        transition: all 0.1s ease-out;
+        &.content-is-active {
+            transform: rotateZ(45deg);
+        }
+        &:hover {
+            background-color: var(--color-bg-secondary);
+            cursor: pointer;
+        }
+
+        span {
+            width: 6px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: var(--color-white);
+            z-index: 8;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &:nth-child(1) {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+}

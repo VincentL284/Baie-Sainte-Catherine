@@ -1,0 +1,211 @@
+.infolettre .input {
+    margin-bottom: 20px;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire {
+    .grille_info_perso {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        @media screen and (max-width: $breakpoint-sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+    .grille_info_perso input {
+        width: 100%;
+        border: 2px solid var(--color-primary);
+        border-radius: 8px;
+        padding: 10px;
+    }
+    button {
+        margin-top: 10px;
+    }
+
+    //--------------Select----------------------
+    .select {
+        position: relative;
+        .input__element {
+            appearance: none;
+
+            &:invalid {
+                color: var(--color-secondary);
+            }
+        }
+
+        select {
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            border: 2px solid var(--color-primary);
+            border-radius: 8px;
+            padding: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &::after {
+            --size: 30px;
+            content: '';
+            background: url('../assets/images/fleche.png') no-repeat 50% 50%;
+            background-size: 100%;
+            height: var(--size);
+            width: var(--size);
+            position: absolute;
+            pointer-events: none;
+            margin-right: 10px;
+            bottom: 15%;
+            right: 0;
+            transform: translateY(50%);
+            z-index: 2;
+        }
+
+        option {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            display: flex;
+            text-align: left;
+            border-radius: 18px;
+            border: none;
+        }
+    }
+
+    //--------------Message----------------------
+
+    .textarea {
+        margin-top: 10px;
+        .input__element {
+            resize: vertical;
+            height: 180px;
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid var(--color-primary);
+        }
+    }
+
+    //-------------Radio-------------------------
+    fieldset {
+        border: none;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            cursor: pointer;
+        }
+        .flex__radio {
+            display: flex;
+            max-width: 50%;
+            justify-content: space-between;
+        }
+    }
+    .sujet input {
+        display: block;
+        border: 2px solid var(--color-primary);
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    //-------Checkbox-----------------
+
+    .checkbox {
+        --active-scale: 1;
+        .input__element {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        .form__label {
+            --size: 22px;
+            cursor: pointer;
+            overflow: hidden;
+            padding-left: calc(var(--size) + var(--spacing-sm));
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: var(--size);
+                width: var(--size);
+            }
+
+            &::before {
+                background-color: var(--color-white);
+                border-radius: var(--input-radius);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            }
+
+            &::after {
+                opacity: 0;
+                transform: scale(0);
+                transition: all 0.4s $ease-out-expo;
+            }
+        }
+
+        .input__element:checked + .form__label {
+            &::after {
+                opacity: 1;
+                transform: scale(var(--active-scale));
+            }
+        }
+    }
+
+    .checkbox {
+        .form__label::after {
+            background: url('../assets/icons/crochet.svg') no-repeat 50% 50%;
+            background-size: 90%;
+        }
+    }
+
+    /*
+   error et defi message erreur
+   ========================================================================== */
+    .defi_message {
+        margin: 0;
+        display: none;
+    }
+
+    .error {
+        .input__element,
+        input {
+            box-shadow: inset 0 0 0 3px var(--color-fail);
+            border: 4px solid var(--color-fail);
+        }
+
+        .form__label {
+            color: var(--color-fail);
+        }
+        .defi_message {
+            display: block;
+        }
+    }
+
+    /*
+       autre
+       ========================================================================== */
+    .form__footer {
+        background: none;
+        margin: 0;
+    }
+
+    .form__confirmation {
+        display: none;
+    }
+    .is-sent {
+        .form__body {
+            display: none;
+        }
+        .form__confirmation {
+            display: block;
+        }
+    }
+
+    fieldset h5 {
+        margin: 50px 0 10px 0;
+    }
+}

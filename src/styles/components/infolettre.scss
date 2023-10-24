@@ -1,0 +1,33 @@
+.infolettre {
+    .rond {
+        display: none;
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        background: var(--color-bg-secondary);
+        margin-right: -50px;
+        @media screen and (min-width: $breakpoint-sm) {
+            display: block;
+        }
+    }
+
+    .deco_content {
+        color: white;
+        background-color: var(--color-primary);
+        border-radius: 18px;
+        height: 162px;
+        width: 384px;
+        padding: 0 20px;
+        margin-left: 0px;
+        margin-top: 0px;
+        @media screen and (min-width: $breakpoint-sm) {
+            margin-left: -50px;
+            margin-top: 80px;
+        }
+    }
+    .infolettre_deco {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
